@@ -23,3 +23,23 @@ $Shell.Namespace(0).ParseName("C:\ProgramData\Avid\Licenses").InvokeVerb("delete
 
 Write-Output "Avid Media Composer trial reset to 30 days. Open Avid MC."
 ```
+
+### Avid Media Composer强制英文界面
+
+如需在非英文语言环境下强制使用英文界面，请运行以下命令将 `English_override.xml` 文件重命名为 `override.xml`：
+
+- macOS 终端运行并输入密码：
+```bash
+sudo mv "/Applications/Avid Media Composer/SupportingFiles/International/xml/English_override.xml" "/Applications/Avid Media Composer/SupportingFiles/International/xml/override.xml" && echo "Avid Media Composer is now set to English override."
+```
+
+- Windows CMD 管理员身份运行：
+```cmd
+rename "C:\Program Files\Avid\Avid Media Composer\SupportingFiles\International\xml\English_override.xml" override.xml && echo Avid Media Composer is now set to English override.
+```
+
+- Windows PowerShell 管理员身份运行：
+```powershell
+Rename-Item "C:\Program Files\Avid\Avid Media Composer\SupportingFiles\International\xml\English_override.xml" "override.xml"
+Write-Output "Avid Media Composer is now set to English override."
+```
